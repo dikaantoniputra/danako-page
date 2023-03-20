@@ -1,0 +1,299 @@
+:root {
+    --orange: #79C121;
+    --darkorange: #1C913C;
+    --form: #EEF4E6;
+    --platinum: #e5e5e5;
+    --black: #2b2d42;
+    --white: #fff;
+    --thumb: #edf2f4;
+  }
+
+  /* umum */
+
+  .bg-danako{
+    background: var(--darkorange);
+  }
+
+  .bg-danako-primary{
+    background: var(--orange);
+  }
+
+  .form-bg{
+    background: var(--form);
+  }
+
+
+  .pb-80{
+    padding-bottom: 80px;
+  }
+
+
+  
+
+
+  .navbar-light .navbar-nav .nav-link{
+      padding-left: 20px;
+  }
+  
+  
+  .navbar-nav .nav-item:nth-last-of-type(2) .nav-link {
+    margin-right: 40px; /* memberikan jarak 10px antara link terakhir dan tombol Toggle Akun */
+  }
+  
+  
+  .navbar-nav .nav-item form input[type="search"] {
+    width: 576px;
+    height: 40px;
+    background: #D9D9D9;
+    background-image: url('../img/search.png'); /* Ganti path/to/search-icon.png dengan path ke file ikon search */
+    background-repeat: no-repeat;
+    background-position: right 10px center ; 
+    background-size: 20px; /* Atur ukuran ikon search */
+    border-radius: 30px;
+    padding: 5px 15px;
+    border: none;
+    font-size: 16px;
+    color: #444;
+    box-shadow: none;
+  }
+
+  
+  
+  .container .title span {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: middle;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 76px;
+    align-items: center;
+    letter-spacing: -0.13px;
+    color: #1C913C;
+}
+
+@media (max-width: 767px) {
+    .container .title span {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container .title span {
+        font-size: 60px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container .title span {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container .title span {
+        font-size: 76px;
+    }
+}
+
+  
+
+/* scroling */
+  .container .slider{
+    padding-top: 122px;
+  }
+  
+  .slider h2 {
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 40px;
+    /* or 83% */
+    letter-spacing: -0.13px;
+  }
+  .title-gren{
+    color: var(--orange);; 
+  }
+  
+  .cards-category {
+    display: grid;
+    grid-auto-columns: 100%;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .cards-category .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+  }
+  
+  .cards-category .card:hover {
+    color: var(--white);
+    background: var(--orange);
+  }
+  
+  .cards-category .card .card-title {
+    font-size: 20px;
+  }
+  
+  .cards-category .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  
+  .cards-category .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  
+  .cards-category .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--orange);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .cards-category .card:hover .card-link {
+    background: var(--darkorange);
+  }
+  
+  .cards-category::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards-category::-webkit-scrollbar-thumb,
+  .cards-category::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards-category::-webkit-scrollbar-thumb {
+    background: var(--darkorange);
+  }
+  
+  .cards-category::-webkit-scrollbar-track {
+    background: var(--thumb);
+  }
+  
+  @media (min-width: 500px) {
+    .cards-category {
+      grid-auto-columns: calc(50% - 10px);
+      grid-column-gap: 20px;
+    }
+  }
+  
+  @media (min-width: 700px) {
+    .cards-category {
+      grid-auto-columns: calc(calc(100% / 3) - 20px);
+      grid-column-gap: 30px;
+    }
+  }
+  
+  @media (min-width: 1100px) {
+    .cards-category {
+      grid-auto-columns: calc(25% - 30px);
+      grid-column-gap: 40px;
+    }
+  }
+
+  /* pagination */
+
+  .pagination-wrapper{
+    text-align: center;
+  }
+
+  .pagination {
+    list-style: none;
+    display: inline-block;
+    padding-top: 30px;
+    margin-top: 10px;
+  }
+  
+  .pagination li {
+    display: inline;
+    text-align: center;
+  }
+  
+  .pagination a {
+    float: left;
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 5px 12px;
+    color: #070707;
+    margin-left: -1px;
+    border: 1px solid transparent;
+    line-height: 1.5;
+  }
+  
+  .pagination a.active {
+    cursor: default;
+  }
+  
+  .pagination a:active {
+    outline: none;
+  }
+  
+
+  .modal-3 a {
+    margin-left: 3px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 100%;
+  }
+  
+  .modal-3 a:hover {
+    background-color: #4dad16;
+  }
+  
+  .modal-3 a.active,
+  .modal-3 a:active {
+    background-color: #37b247;
+  }
+  
+  /* informasi downlod */
+  
+
+
+  /* zakat style */
+
+  
+
+  .zakat-class .h2{
+    
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 25px;
+      /* identical to box height, or 62% */
+      display: flex;
+      align-items: center;
+      text-align: center;
+      letter-spacing: -0.13px;
+    }
+
+    .bt-zakat{
+      border : none;
+      border-radius: 10px ;
+      width: 365px;
+      height: 60px;
+    }
+
+
+  
+  /* FOOTER STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
