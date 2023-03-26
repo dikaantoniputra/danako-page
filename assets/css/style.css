@@ -22,15 +22,17 @@
     background: var(--form);
   }
 
+  .color-primary{
+    color: var(--orange);
+  }
+
 
   .pb-80{
     padding-bottom: 80px;
   }
 
 
-  
-
-
+/* navbar */
   .navbar-light .navbar-nav .nav-link{
       padding-left: 20px;
   }
@@ -56,7 +58,48 @@
     color: #444;
     box-shadow: none;
   }
+ 
 
+  
+  /* media query */
+  @media only screen and (max-width: 767px) {
+    .navbar-nav .nav-link {
+      padding-left: 0;
+    }
+  
+    .navbar-nav .nav-item {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-nav .nav-item:nth-last-of-type(2) .nav-link {
+      margin-right: 0;
+    }
+  
+    .navbar-nav .nav-item form input[type="search"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .nav-item .d-flex{
+      padding-top: 40px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .navbar-light .navbar-nav .nav-link {
+      padding-left: 0;
+    }
+  
+    .navbar-nav .nav-item:nth-last-of-type(2) .nav-link {
+      margin-right: 0;
+    }
+  
+    .navbar-nav .nav-item form input[type="search"] {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+/* end navbar */
   
   
   .container .title span {
@@ -97,10 +140,9 @@
 }
 
   
-
 /* scroling */
   .container .slider{
-    padding-top: 122px;
+    padding-top: 50px;
   }
   
   .slider h2 {
@@ -245,7 +287,6 @@
     outline: none;
   }
   
-
   .modal-3 a {
     margin-left: 3px;
     padding: 0;
@@ -264,13 +305,7 @@
     background-color: #37b247;
   }
   
-  /* informasi downlod */
-  
 
-
-  /* zakat style */
-
-  
 
   .zakat-class .h2{
     
@@ -293,7 +328,190 @@
       height: 60px;
     }
 
+  .information-container{
+    background-color: #6C6A6A;;
+  }
 
+  .information-container .title{
+    color: white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    /* identical to box height, or 100% */
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.13px;
+
+  }
+
+  .information-container .container h6{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    /* or 125% */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: -0.13px;
+
+    color: #E9ECEB;
+  }
+  /* end index */
+
+
+  /* style confirm email */
+
+  .email-confirm {
+    background-image: url('../img//bgcover.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .email-confirm .card {
+    width: 885px;
+    height: 546px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email-confirm .card img {
+    object-fit: cover;
+    border-radius: 15px;
+  }
+  
+  .email-confirm h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 59px;
+    color: #1C913C;
+  }
+
+  .email-confirm p{
+    width: 388px;
+    height: 63px;
+    left: 187px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  /* Media queries for smaller devices */
+  @media (max-width: 768px) {
+    .email-confirm .card {
+      width: 90%;
+      height: auto;
+    }
+
+    .email-confirm h2 {
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    .email-confirm p {
+      width: 80%;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  /* Media queries for larger devices */
+  @media (min-width: 1200px) {
+    .email-confirm .card {
+      width: 1100px;
+    }
+
+    .email-confirm h2 {
+      font-size: 60px;
+      line-height: 71px;
+    }
+
+    .email-confirm p {
+      width: 450px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+
+  /* ajuan campaign */
+
+  .c-notverifikasi {
+    width: 1346px;
+    height: 679px;
+    margin: auto;
+    background-image: url("/assets/img/bgcard.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .c-notverifikasi .d-flex {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .c-notverifikasi .d-flex .title {
+    text-align: center;
+    width: 598px;
+    height: 61px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+  
+  .c-notverifikasi .d-flex .title h6{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 24px;
+  }
+  
+  .konten{
+    width: 406px; 
+    height: 351px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 767px) {
+    /* Adjust the size of the container to fit smaller screens */
+    .c-notverifikasi {
+      width: auto;
+      height: auto;
+      padding: 20px;
+    }
+  
+    /* Adjust the size of the title */
+    .c-notverifikasi .d-flex .title {
+      width: 100%;
+      height: auto;
+    }
+  
+    /* Adjust the size of the images */
+    .konten {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
   
   /* FOOTER STYLES
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
